@@ -1,0 +1,524 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-bo;
+  list-style-type: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif; /* External font from Google Fonts "Alatsi" */
+  background-color: black;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+aside {
+  position: fixed;
+  border-right: 1px solid #363638;
+}
+aside .logo {
+  padding: 32px 20px 35px 22px;
+  font-size: 30px;
+}
+aside nav {
+  height: 97vh;
+  width: 15vw;
+}
+aside nav .nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 85%;
+}
+aside nav .nav-list div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+aside nav .nav-list div .instaIcon {
+  display: none;
+}
+aside nav .nav-list div li a {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 17px;
+}
+aside nav .nav-list div li a img {
+  margin-right: 12px;
+}
+aside nav .nav-list div li a .pimg {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  margin-right: 12px;
+}
+
+main {
+  margin-left: 15vw; /* Because the sidebar is 15vw wide */
+}
+main header {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+}
+main header .containerall {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 700px;
+}
+main header .containerall li .informationall {
+  display: flex;
+  gap: 55px;
+  padding-top: 3%;
+  padding-left: 7%;
+}
+main header .containerall li .informationall .imgprofile {
+  border-radius: 100%;
+  max-width: 120px;
+  max-height: 120px;
+}
+main header .containerall li .informationall .container-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+main header .containerall li .informationall .container-info .infoedit {
+  display: flex;
+  gap: 10px;
+}
+main header .containerall li .informationall .container-info .infoedit .name {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  font-weight: bolder;
+  margin-top: 5px;
+}
+main header .containerall li .informationall .container-info .infoedit .edit {
+  display: flex;
+  align-items: center;
+  background-color: #363638;
+  border-radius: 8px;
+  padding: 2px 12px;
+  font-size: 12px;
+  text-align: center;
+}
+main header .containerall li .informationall .container-info .infoedit .edit a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+main header .containerall li .informationall .container-info .information {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  font-size: 15px;
+}
+main header .containerall li .informationall .container-info .information p {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+}
+main header .containerall li.container-new {
+  padding-left: 20px;
+}
+main header .containerall li.container-new .newp {
+  color: rgba(255, 255, 255, 0.7);
+  padding-left: 20px;
+  font-size: 12px;
+}
+main section .container-posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section .container-posts .Po-Sa-Ta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 12px;
+  border-top: 1px solid #363638;
+  width: 700px;
+}
+main section .container-posts .Po-Sa-Ta li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: #363638;
+  font-weight: bold;
+}
+main section .container-posts .Po-Sa-Ta li img {
+  margin-right: 12px;
+}
+main section .container-posts .Po-Sa-Ta .selected {
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 2px solid white;
+  font-weight: 500;
+}
+main section .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+main section .gallery img {
+  max-width: 230px;
+  max-height: 230px;
+}
+main footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main footer .footerlinks {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+main footer .footerlinks a {
+  text-decoration: none;
+  color: #363638;
+  font-size: 10px;
+  font-weight: bold;
+}
+main footer .Language {
+  display: flex;
+  margin: 18px 0;
+  gap: 21px;
+  font-size: 11px;
+}
+main footer .Language select {
+  border: none;
+  color: #363638;
+  font-size: 12px;
+  font-weight: bolder;
+  background-color: black;
+}
+main footer .Language p {
+  color: #363638;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.mobile-header,
+.emoji,
+.information-mobile {
+  display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  aside .logo {
+    display: none;
+  }
+  aside nav {
+    height: 100vh;
+    width: 8vw;
+  }
+  aside nav .nav-list {
+    padding: 30% 0 0 6%;
+  }
+  aside nav .nav-list li.instaIcon {
+    display: block;
+    margin-bottom: 40px;
+  }
+  aside nav .nav-list span {
+    display: none;
+  }
+  main {
+    margin-left: 8vw;
+  }
+  main header .containerall {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 686px;
+  }
+  section .container-posts {
+    margin-left: 1px;
+  }
+  section .Po-Sa-Ta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 12px;
+    border-top: 1px solid #363638;
+    width: 700px;
+  }
+  section .Po-Sa-Ta li {
+    display: flex;
+    align-items: center;
+  }
+  section .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  section .gallery img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footerlinks {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  footer .footerlinks a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+  }
+  footer .Language {
+    display: flex;
+    margin: 18px 0;
+    gap: 20px;
+    font-size: 11px;
+  }
+  footer .Language select {
+    border: none;
+    color: #363638;
+    font-size: 12px;
+    font-weight: bolder;
+  }
+  footer .Language p {
+    color: #363638;
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  * {
+    overflow-x: hidden;
+  }
+  aside {
+    border: none;
+  }
+  aside .logo {
+    display: none;
+  }
+  aside .nav-list .f-items {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0%;
+    gap: 0;
+    width: 100vw;
+    height: 55px;
+    background-color: black;
+  }
+  aside .nav-list .f-items li {
+    overflow: hidden;
+  }
+  aside .nav-list .f-items li img {
+    width: 40px;
+    height: 40px;
+  }
+  aside .nav-list .f-items li .pimg {
+    height: 40px;
+    width: 40px;
+    margin: 0;
+  }
+  aside .nav-list .f-items li span {
+    display: none;
+  }
+  aside .nav-list .f-items .searchIcon,
+  aside .nav-list .f-items .heartIcon {
+    display: none;
+  }
+  aside .nav-list .bottomIcons {
+    display: none;
+  }
+  main {
+    width: 100vw;
+    margin: 0 0 55px 0;
+  }
+  main header {
+    height: auto;
+  }
+  main header .mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    padding: 10px;
+    background-color: black;
+    border-bottom: 1px solid white;
+  }
+  main header .containerall {
+    margin-bottom: 15px;
+  }
+  main header .containerall .AddedHeader {
+    margin: 70px 0 0 10px;
+  }
+  main header .containerall .AddedHeader .informationall {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 5vw;
+  }
+  main header .containerall .AddedHeader .informationall .container-info .infoedit {
+    flex-wrap: wrap;
+    width: 280px;
+    -moz-column-gap: 12px;
+         column-gap: 12px;
+    row-gap: 20px;
+    align-content: center;
+    height: 100px;
+  }
+  main header .containerall .AddedHeader .informationall .container-info .infoedit .edit a {
+    font-size: 17px;
+  }
+  main header .containerall .AddedHeader .informationall .container-info .infoedit .Settings {
+    display: none;
+  }
+  main header .containerall .AddedHeader .informationall .container-info .emoji2 {
+    display: none;
+  }
+  main header .containerall .AddedHeader .informationall .imgprofile {
+    max-width: 90px;
+  }
+  main header .containerall .AddedHeader .informationall ul.information {
+    display: none;
+  }
+  main header .containerall .AddedHeader .emoji {
+    display: flex;
+    margin: 20px 0;
+  }
+  main section {
+    width: 100vw;
+  }
+  main section .information-mobile {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    font-size: 15px;
+    border-top: 1px solid #363638;
+    padding: 10px;
+  }
+  main section .information-mobile li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main section .Po-Sa-Ta {
+    width: 100vw !important;
+    gap: 0 !important;
+  }
+  main section .Po-Sa-Ta .click,
+  main section .Po-Sa-Ta .selected {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  main section .Po-Sa-Ta .click img,
+  main section .Po-Sa-Ta .selected img {
+    width: 37px;
+    margin: 5px 0px;
+  }
+  main section .Po-Sa-Ta li {
+    overflow-y: hidden;
+  }
+  main section .Po-Sa-Ta li span {
+    display: none;
+  }
+  main section .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  main section .gallery img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  main footer {
+    display: none;
+  }
+  select {
+    border: none;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+  }
+}
+body.light-mode {
+  background-color: white; /* Couleur de fond en mode clair */
+  color: #363638 !important; /* Couleur de texte en mode clair */
+}
+body.light-mode aside {
+  border-right: 1px solid #363638;
+}
+body.light-mode aside img {
+  filter: invert(98%) sepia(6%) saturate(896%) hue-rotate(192deg) brightness(117%) contrast(76%);
+}
+body.light-mode aside .pimg {
+  filter: none;
+}
+body.light-mode .logo {
+  color: #2a2a2e;
+}
+body.light-mode .nav-list a {
+  color: #29292c;
+}
+body.light-mode header img.Settings {
+  filter: invert(84%) sepia(3%) saturate(167%) hue-rotate(202deg) brightness(112%) contrast(85%);
+}
+@media screen and (max-width: 768px) {
+  body.light-mode .mobile-header {
+    z-index: 10;
+    background-color: white;
+    border-bottom: 1px rgba(0, 0, 0, 0.31) solid;
+  }
+  body.light-mode .mobile-header li {
+    color: black;
+  }
+  body.light-mode .mobile-header li img {
+    filter: invert(98%) sepia(6%) saturate(896%) hue-rotate(192deg) brightness(117%) contrast(76%);
+  }
+  body.light-mode aside {
+    border: none;
+  }
+  body.light-mode aside .f-items {
+    background-color: white;
+  }
+}
+body.light-mode header li .container-info .infoedit .name {
+  color: #363638 !important;
+}
+body.light-mode header li .container-info .infoedit .edit {
+  background-color: #dfdfe3 !important;
+}
+body.light-mode header li .container-info .infoedit .edit a {
+  color: #363638 !important;
+  font-weight: 600;
+}
+body.light-mode header li .container-info .information p {
+  color: #4f4f50 !important;
+}
+body.light-mode header .new img {
+  filter: invert(84%) sepia(3%) saturate(167%) hue-rotate(202deg) brightness(112%) contrast(85%);
+}
+body.light-mode select {
+  color: #707078;
+  background-color: white !important;
+}
+body.light-mode .post {
+  color: black;
+}
+body.light-mode .selected {
+  filter: invert(98%) sepia(6%) saturate(896%) hue-rotate(192deg) brightness(117%) contrast(76%);
+}
+body.light-mode .edit {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}/*# sourceMappingURL=style.css.map */
